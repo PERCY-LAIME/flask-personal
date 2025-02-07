@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.tx
+RUN pip install -r requirements.txt
 
 EXPOSE 5000 
 
-CMD ["python", "run", "app.py"]
+CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
